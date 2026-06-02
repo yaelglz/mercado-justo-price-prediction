@@ -2553,7 +2553,7 @@ overflow-x: auto !important;
 <span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a>    (<span class="st">&quot;Fecha fin&quot;</span>,               <span class="bu">str</span>(fecha_max)),</span>
 <span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a>], [<span class="st">&quot;Métrica&quot;</span>, <span class="st">&quot;Valor&quot;</span>]).toPandas().set_index(<span class="st">&quot;Métrica&quot;</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="carga-spark" class="cell-output cell-output-display" data-execution_count="3">
+<div id="carga-spark" class="cell-output cell-output-display" data-execution_count="24">
 <div>
 
 
@@ -2616,7 +2616,7 @@ overflow-x: auto !important;
 <pre><code>Presentación utilizada por producto
 </code></pre>
 </div>
-<div id="tabla-presentaciones" class="cell-output cell-output-display" data-execution_count="4">
+<div id="tabla-presentaciones" class="cell-output cell-output-display" data-execution_count="25">
 <div>
 
 
@@ -2669,7 +2669,7 @@ overflow-x: auto !important;
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>desc.toPandas()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="estadisticos" class="cell-output cell-output-display" data-execution_count="5">
+<div id="estadisticos" class="cell-output cell-output-display" data-execution_count="26">
 <div>
 
 
@@ -2971,7 +2971,7 @@ Precio prom. pronosticado (12m): $484.87</code></pre>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>]</span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(metricas_rows)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="arima-metricas" class="cell-output cell-output-display" data-execution_count="10">
+<div id="arima-metricas" class="cell-output cell-output-display" data-execution_count="31">
 <div>
 
 
@@ -3303,7 +3303,7 @@ Balance de criterios (% de registros donde aplica cada uno):
 <pre><code>Balance de clases en train — vende=1: 20411 (25.9%)  vende=0: 58440 (74.1%)
 Pesos aplicados — w(vende=1): 1.932  w(vende=0): 0.675</code></pre>
 </div>
-<div id="ml-train" class="cell-output cell-output-display" data-execution_count="14">
+<div id="ml-train" class="cell-output cell-output-display" data-execution_count="35">
 <div>
 
 
@@ -4181,7 +4181,7 @@ Precio pronosticado SARIMA (prom. 12m): $484.87
 </section>
 <section id="sec-dijkstra" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> Investigación de Operaciones – Optimización Logística</h1>
-<p>Esta sección detalla la lógica algorítmica que fundamenta nuestra solución de transporte. A diferencia de una ruta estática, el sistema permite resolver automáticamente el orden óptimo de entrega mediante la regla de relajación de <strong>Dijkstra</strong> y el análisis de permutaciones, buscando siempre la ruta más económica para el productor.</p>
+<p>Esta sección detalla la lógica algorítmica que fundamenta nuestra solución de transporte. A diferencia de una ruta estática, el sistema permite resolver automáticamente la secuencia óptima de entrega y la estimación de costos generada mediante algoritmos de optimización logística basados en <strong>Dijkstra</strong> y análisis de rutas.</p>
 <section id="dashboard-interactivo-de-planificación" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="dashboard-interactivo-de-planificación"><span class="header-section-number">8.1</span> Dashboard Interactivo de Planificación</h2>
 <p>Para facilitar el uso de estas herramientas avanzadas de optimización, hemos desarrollado un <strong>Dashboard Interactivo</strong> independiente. En este sitio web, el productor podrá:</p>
@@ -4191,7 +4191,7 @@ Precio pronosticado SARIMA (prom. 12m): $484.87
 <li>Obtener en tiempo real la comparativa de costos y la secuencia óptima de viaje generada por el algoritmo de Dijkstra.</li>
 </ol>
 <p>Haz clic en el siguiente enlace para acceder a la herramienta de planificación:</p>
-<p><a href="#"><strong>Abrir Dashboard Interactivo de Planificación Logística</strong></a></p>
+<p><a href="https://mercado-justo-beta.vercel.app/logistica" target="_blank" class="btn btn-primary"> Abrir Dashboard Interactivo </a></p>
 <p><em>(Nota: Este link redirige a la aplicación web externa donde se encuentra desplegada la interfaz interactiva).</em></p>
 <hr>
 </section>
@@ -4243,7 +4243,7 @@ Precio pronosticado SARIMA (prom. 12m): $484.87
 <span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a>    })</span>
 <span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a>spark.createDataFrame(filas_mkt).toPandas()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="marketing-resumen" class="cell-output cell-output-display" data-execution_count="18">
+<div id="marketing-resumen" class="cell-output cell-output-display" data-execution_count="39">
 <div>
 
 
@@ -4308,7 +4308,7 @@ Precio pronosticado SARIMA (prom. 12m): $484.87
 <span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>])</span>
 <span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>acciones.toPandas()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="marketing-tabla" class="cell-output cell-output-display" data-execution_count="19">
+<div id="marketing-tabla" class="cell-output cell-output-display" data-execution_count="40">
 <div>
 
 
